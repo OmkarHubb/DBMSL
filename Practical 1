@@ -7,4 +7,11 @@ alter user a2 identified by sitop123;
 commit; or exit;
 (save and quit)
 
-alter user a2 account unlock;
+create table p_info (id int, name varchar2(50), contact int, desg varchar2(10));
+
+select * from tab;
+(to list all tables)
+
+select * from p_info;
+
+insert into p_info values (101, 'xyz', 1234567890, 'student');
