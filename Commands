@@ -6,3 +6,5 @@ alter user a2 identified by sitop123;
 
 commit; or exit;
 (save and quit)
+
+alter user a2 account unlock;
