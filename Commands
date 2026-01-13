@@ -1,0 +1,8 @@
+create user a2 identified by sit;
+
+grant connect, resource to a2;
+
+alter user a2 identified by sitop123;
+
+commit; or exit;
+(save and quit)
