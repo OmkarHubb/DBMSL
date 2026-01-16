@@ -15,3 +15,35 @@ select * from tab;
 select * from p_info;
 
 insert into p_info values (101, 'xyz', 1234567890, 'student');
+
+create table st_info (PRN number, Name varchar(20), Sub1 number, Sub2 number, Sub3 number, Total number, Percentage number);
+
+insert into st_info values (25070521515, 'Omkar', 99, 91, 92, NULL, NULL);
+insert into st_info values (25070521502, 'Tadas', 71, 76, 89, NULL, NULL);
+
+Update st_info set Total = Sub1 + Sub2 + Sub3;    
+
+Update st_info set Percentage = (total/300) * 100;  
+
+desc st_info;  
+(display structure of table)
+
+select * from st_info;
+(display the rows/ data of table)
+
+truncate table st_info;
+(delete the data of the table)
+
+drop table_st_info;
+(delete the data with the entire structure of table)
+
+
+
+
+
+create table emp_info (emp_id number, Name varchar(20), Designation varchar(20), Branch varchar(20), Salary number, contact number);
+
+insert into emp_info values (250515, 'Omkar', 'CEO', 'Nagpur', 500000, 1234567890);
+insert into emp_info values (250502, 'Tadas', 'Chaprasi', 'Nagpur', 20000, 1234567890);
+
+alter table emp_info add 
