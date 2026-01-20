@@ -1,0 +1,33 @@
+Assignment:
+
+create table emp (emp_id int, name varchar(20), basic number);
+
+insert into emp values (123456789, 'Ramesh', 50000);
+insert into emp values (123456745, 'Suresh', 60000);
+insert into emp values (223356789, 'Naresh', 40000); 
+insert into emp values (123453489, 'Rakesh', 50000); 
+insert into emp values (167556789, 'Rajesh', 40000);
+insert into emp values (123456789, 'Ramesh', 60000);
+insert into emp values (123456789, 'Ritesh', 50000);
+insert into emp values (354456789, 'Jitesh', 50000);
+insert into emp values (187634789, 'Jignesh', 40000);
+insert into emp values (543466789, 'Giresh', 40000);
+
+alter table emp add(hra number, da number, total number);
+
+update emp set hra = (7.5 / 100)* basic;
+update emp set da = (150 / 100)* basic;
+
+update emp set total = hra + da;
+
+alter table emp add (dedu number, take_home number);
+
+update emp set dedu = (12 / 100) * total;
+
+update emp set take_home = total - dedu;
+
+insert into emp (emp_id, name, basic) values (1234567890, 'abc', 10000);
+insert into emp (emp_id, name, basic) values (1234567890, 'abc', 20000);
+insert into emp (emp_id, name, basic) values (1234567890, 'abc', 30000);
+insert into emp (emp_id, name, basic) values (1234567890, 'abc', 40000);
+insert into emp (emp_id, name, basic) values (1234567890, 'abc', 50000); 
