@@ -1,0 +1,16 @@
+
+create table st_info (PRN number, ST_NAME varchar2(50), M1 number, M2 number, M3 number);
+
+insert into st_info values (123456789, 'Ramesh', 89, 78, 90, NULL, NULL);
+insert into st_info values (123456745, 'Suresh', 71, 84, 97, NULL, NULL);
+insert into st_info values (223356789, 'Naresh', 84, 75, 81, NULL, NULL);
+insert into st_info values (123453489, 'Rakesh', 93, 65, 87, NULL, NULL);
+insert into st_info values (167556789, 'Rajesh', 79, 98, 64, NULL, NULL);
+insert into st_info values (123456789, 'Ramesh', 67, 78, 76, NULL, NULL);
+insert into st_info values (123456789, 'Ritesh', 96, 89, 56, NULL, NULL);
+
+alter table st_info add (Total number, Percentage number);
+
+update st_info set Total = M1 + M2 + M3;
+
+update st_info set percentage = (Total / 300) * 100;
