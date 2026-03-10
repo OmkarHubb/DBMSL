@@ -1,5 +1,5 @@
 WHILE LOOP
-
+Practical 7
 
 
 Print 1st 10 numbers using while loop
@@ -103,6 +103,7 @@ End;
 
 
 IF CONDITION
+practical 8
 
 
 create or replace procedure ifelsecase1
