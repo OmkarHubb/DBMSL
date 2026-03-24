@@ -1,0 +1,43 @@
+Practical No. 10
+
+1) CREATE OR REPLACE PROCEDURE EXC1 (n IN NUMBER) 
+
+AS
+vname Employees.Emp_name%type;
+vsalary Employees.salary%type;
+
+BEGIN
+SELECT emp_name, salary INTO vname, vsalary From Employees WHERE emp_id = n;
+DBMS_OUTPUT.PUT_LINE('EMP NAME = ' || vname);
+DBMS_OUTPUT.PUT_LINE('SALARY = ' || vsalary);
+
+EXCEPTION
+WHEN NO_DATA_FOUND THEN
+	DBMS_OUTPUT.PUT_LINE('EMP ID NOT FOUND');
+END;
+/
+
+
+Set Serveroutput on;
+Execute EXC1(2);
+
+
+
+2) CREATE OR REPLACE PROCEDURE EXC2 (m1 IN NUMBER, m2 IN NUMBER, m3 IN NUMBER) 
+AS
+invalid_marks EXCEPTION;
+
+BEGIN
+	IF m1 < 0 or m1 > 100 or m2 < 0 or m2 > 0 or m3 < 0 or m3 > 0
+		RAISE invalid_marks;
+	ELSIF m1 > 50 and m2>50 and m3>50
+		DBMS_OUTPUT.PUT_LINE('RESULT: PASS');
+	ELSE
+		DBMS_OUTPUT.PUT_LINE('RESULT: FAIL');
+	END IF;
+
+EXCEPTION
+WHEN invalid_marks THEN
+	DBMS_OUTPUT.PUT_LINE('Invalid Marks');
+END;
+/
